@@ -1,0 +1,14 @@
+$bg:#eee;
+
+.box {
+    background-color: $bg;
+    &__title {
+        color: red;
+    }
+    &__svg {
+        fill: blueviolet;
+        &:hover {
+            fill:gold;
+        }
+    }
+}
