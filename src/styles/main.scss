@@ -94,7 +94,7 @@ body {
     height: 3.2rem;
     transition: .3s;
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     &_footer {
         margin-top: 7px;
@@ -306,12 +306,13 @@ body {
     padding-bottom: 14.6rem;
     &__text {
         margin-top: 5.8rem;
-        margin-bottom: 9.5rem;
+        margin-bottom: 1.5rem;
         max-width: 700px;
     }
 }
 .slider {
     overflow: hidden;
+    padding-top: 8rem;
 }
 .swiper {
     overflow: initial;
@@ -331,6 +332,18 @@ body {
             flex-direction: column;
             justify-content: flex-end;
             padding: 4rem 3.7rem;
+            &::after {
+                content: '';
+                background-color: transparent;
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                border-radius: 2rem;
+                z-index: -1;
+                transition: .3s;
+            }
             &:hover {
                 .swiper-slide__hover {
                     height: 233px;
@@ -339,13 +352,6 @@ body {
                 &::after {
                     content: '';
                     background-color: rgba($white, .55);
-                    width: calc(100% - 4px);
-                    height: calc(100% - 4px);
-                    position: absolute;
-                    top: 2px;
-                    left: 2px;
-                    border-radius: 2rem;
-                    z-index: -1;
                 }
             }
         }
@@ -447,6 +453,7 @@ body {
         &::after {
             color: rgba($green, .4);
             font-size: 20px;
+            transition: .3s;
         }
     }
     &-button-next {
@@ -464,10 +471,10 @@ body {
         width: 50px;
         height: 50px;
         border: 1px solid $green;
+        border-radius: 100%;
         background-color: transparent;
         padding: 0;
         background-position: center center;
-        border-radius: 100%;
         &_min {
             width: 40px;
             height: 40px;
@@ -571,7 +578,7 @@ body {
     padding-bottom: 16.7rem;
     &__text {
         margin-top: 3.8rem;
-        margin-bottom: 8.5rem;
+        margin-bottom: .5rem;
     }
 }
 .category {
